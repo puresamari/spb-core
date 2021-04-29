@@ -2,7 +2,7 @@
   "name": "@puresamari/spb-core",
   "version": "0.1.0",
   "description": "A simple build tool for quick website development.",
-  "main": "./lib/src/lib/lib.js",
+  "main": "./lib/lib.js",
   "scripts": {
     "start": "nodemon",
     "create": "npm run build && npm run test",

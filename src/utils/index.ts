@@ -1,5 +1,5 @@
-import { IBuilderContext } from './definitions';
-export * from './definitions';
+import { IBuilderContext } from '../definitions';
+export * from '../definitions';
 
 export function NormalizeContextForBuildContext(context: IBuilderContext): IBuilderContext {
   return {
@@ -8,3 +8,5 @@ export function NormalizeContextForBuildContext(context: IBuilderContext): IBuil
     scripts: context.scripts.map(v => v.replace(context.basePath, ''))
   }
 }
+
+export * from './config';

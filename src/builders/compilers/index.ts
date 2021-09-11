@@ -1,5 +1,5 @@
 import path from 'path';
-import { IBuilderContext } from 'src/definitions';
+import { IBuilderContext } from '../../definitions';
 
 import { Compiler } from './compiler';
 import CopyCompiler from './copy';

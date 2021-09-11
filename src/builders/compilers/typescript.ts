@@ -11,8 +11,6 @@ export default class TypescriptCompiler extends Compiler {
 
   constructor(public readonly file: string, public readonly context: IBuilderContext) {
     super(file, context);
-    // console.log(this.file, this.context.basePath)
-    console.log(this.context.basePath)
     this.bundler = new TypescriptBundler(this.file, this.context.basePath);
   }
 

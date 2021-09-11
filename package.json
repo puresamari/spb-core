@@ -1,6 +1,6 @@
 {
   "name": "@puresamari/spb-core",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A simple build tool for quick website development.",
   "main": "./lib/lib.js",
   "scripts": {
@@ -44,27 +44,27 @@
     "@types/rimraf": "^3.0.0",
     "@types/twig": "^1.12.3",
     "@types/ws": "^7.2.6",
+    "alpinejs": "^3.3.3",
+    "fast-sha256": "^1.3.0",
+    "lodash": "^4.17.21",
     "nodemon": "^2.0.4",
+    "tailwindcss": "^1.9.6",
     "three": "^0.121.1",
     "ts-node": "^8.10.2",
     "tsconfig-paths": "^3.9.0",
     "typescript": "^3.9.6",
-    "alpinejs": "^3.3.3",
-    "autoprefixer": "^9.8.6",
-    "fast-sha256": "^1.3.0",
-    "tailwindcss": "^1.9.6",
-    "lodash": "^4.17.21",
     "typescript-json-schema": "^0.42.0"
   },
   "directories": {
     "lib": "lib"
   },
   "dependencies": {
-    "glob": "^7.1.6",
     "@puresamari/ts-bundler": "^0.3.3",
+    "autoprefixer": "^10.3.4",
+    "glob": "^7.1.6",
     "mkdirp": "^1.0.4",
-    "postcss": "^7.0.32",
-    "postcss-scss": "^3.0.2",
+    "postcss": "^8.3.6",
+    "postcss-scss": "^4.0.0",
     "precss": "^4.0.0",
     "pretty": "^2.0.0",
     "pug": "^3.0.0",

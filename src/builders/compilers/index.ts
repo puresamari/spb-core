@@ -1,4 +1,5 @@
 import path from 'path';
+import { IBuilderContext } from 'src/definitions';
 
 import { Compiler } from './compiler';
 import CopyCompiler from './copy';
@@ -12,7 +13,7 @@ import TSCompiler from './typescript';
 export type CompielableType = 'ts' | 'css' | 'scss' | 'js' | 'twig' | 'pug';
 
 export const CompilerMapping : {
-  [key in CompielableType]: new(file: string) => Compiler
+  [key in CompielableType]: new(file: string, context: IBuilderContext) => Compiler
 } = {
   ts: TSCompiler,
   js: JSCompiler,
@@ -22,8 +23,8 @@ export const CompilerMapping : {
   twig: TWIGCompiler
 }
 
-export function getCompiler(file: string): Compiler | null {
+export function getCompiler(file: string, context: IBuilderContext): Compiler | null {
   const type = path.extname(file).slice(1) as CompielableType;
-  if (!CompilerMapping[type]) { return new CopyCompiler(file); }
-  return new (CompilerMapping[type])(file);
+  if (!CompilerMapping[type]) { return new CopyCompiler(file, context); }
+  return new (CompilerMapping[type])(file, context);
 }

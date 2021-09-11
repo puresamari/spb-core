@@ -12,6 +12,11 @@ import { IBuilderContext, IBuilderOptions } from './utils';
 
 export class Builder {
   public readonly basePath: string;
+
+  public readonly builderContext: IBuilderContext;
+
+  private readonly compilers = new Map<string, Compiler | null>();
+
   constructor(
     public readonly options: IBuilderOptions,
     public readonly dir: string
@@ -33,7 +38,7 @@ export class Builder {
     };
     options.files.forEach(file => {
       //TODO: this should be resolved in the compiler itself
-      this.compilers.set(file, getCompiler(file));
+      this.compilers.set(file, getCompiler(file, this.builderContext));
     });
   }
 
@@ -66,10 +71,6 @@ export class Builder {
       debounceTime(100)
     );
   }
-
-  public readonly builderContext: IBuilderContext;
-
-  private readonly compilers = new Map<string, Compiler | null>();
 
   public async compile(
     onFileBuildFinished?: ((file: {

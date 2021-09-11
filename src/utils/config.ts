@@ -14,7 +14,7 @@ export function resolveFilePath(file: string) {
   return path.resolve(basePath, file);
 }
 
-function getConfig(configPath: string): IBuilderOptions {
+export function getConfigFromFile(configPath: string): IBuilderOptions {
   const dir = path.dirname(configPath);
   try {
     const configs = JSON.parse(
@@ -54,7 +54,7 @@ export function generateConfig(
   options: IMainProcessOptions
 ): IBuilderOptions {
   const config: IBuilderOptions = options.config
-    ? getConfig(options.config) || { output: "", files: [] }
+    ? getConfigFromFile(options.config) || { output: "", files: [] }
     : { output: "", files: [] };
   if (options.out) {
     config.output = resolveFilePath(options.out);

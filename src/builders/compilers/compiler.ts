@@ -11,7 +11,7 @@ import { BuilderResult, CompilerResult } from './definitions';
 export abstract class Compiler {
   private readonly contextFileBehaviour: BehaviorSubject<string[]>;
 
-  constructor(public readonly file: string) {
+  constructor(public readonly file: string, public readonly context: IBuilderContext) {
     this.contextFileBehaviour = new BehaviorSubject<string[]>([file]);
   }
 

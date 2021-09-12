@@ -1,6 +1,6 @@
 {
   "name": "@puresamari/spb-core",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "A simple build tool for quick website development.",
   "main": "./lib/lib.js",
   "scripts": {
@@ -60,7 +60,7 @@
     "lib": "lib"
   },
   "dependencies": {
-    "@puresamari/ts-bundler": "^0.3.4",
+    "@puresamari/ts-bundler": "^0.3.5",
     "autoprefixer": "^10.3.4",
     "glob": "^7.1.6",
     "mkdirp": "^1.0.4",

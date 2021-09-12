@@ -1,6 +1,6 @@
 {
   "name": "@puresamari/spb-core",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "A simple build tool for quick website development.",
   "main": "./lib/lib.js",
   "scripts": {
@@ -69,7 +69,6 @@
     "precss": "^4.0.0",
     "pretty": "^2.0.0",
     "pug": "^3.0.0",
-    "resolve": "^1.17.0",
     "rimraf": "^3.0.2",
     "rxjs": "^6.6.2",
     "twig": "^1.15.1"
